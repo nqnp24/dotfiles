@@ -1,8 +1,7 @@
 -- ~/.config/nvim/init.lua
 
 -- Load core configuration
---require("config.keymaps")   -- Load key mappings
---require("config.autocmds")  -- Load autocommands
-require("config.lazy")      -- Load plugin manager (lazy.nvim)
+require("config.lazy")
+require("config.autocmds")
+require("config.keymaps")
 
-vim.cmd("colorscheme kanagawa-dragon")
