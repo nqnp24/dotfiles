@@ -2,6 +2,7 @@
 
 -- Load core configuration
 require("config.lazy")
-require("config.autocmds")
 require("config.keymaps")
+require("config.autocmds")
 
+vim.cmd("colorscheme gruvbox")

@@ -6,11 +6,11 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
 opt.showmode = true
-opt.autowrite = false		-- Write buffer if modified
-opt.clipboard = vim.env.SSH_TTY and "" or "unnamedplus" -- Sync with system clipboard
+opt.autowrite = false                       -- Write buffer if modified
+opt.clipboard = "unnamedplus"               -- Sync with system clipboard
 opt.completeopt = "menu,menuone,noselect"
-opt.number = false			-- Enable line numbers
-opt.relativenumber = false	-- Enable relative line numbers
+opt.number = true			-- Enable line numbers
+opt.relativenumber = true	-- Enable relative line numbers
 opt.cursorline = true		-- Enable highlighting of the current line
 opt.tabstop = 4             -- Set tab width to 4 spaces
 opt.shiftwidth = 4          -- Set indentation width to 4 spaces
@@ -25,11 +25,11 @@ opt.wrap = false            -- Disable line wrapping
 opt.termguicolors = true    -- Enable true color support
 opt.inccommand = "nosplit" -- preview incremental substitute
 opt.jumpoptions = "view"
-opt.laststatus = 2			-- global statusline
+opt.laststatus = 3			-- global statusline
+--opt.statusline = [[%f %m %r %= %l:%c %p%%]]
 opt.list = false			-- show some invisible characters (tabs...
 opt.ruler = false			-- Disable the default ruler
 opt.scrolloff = 4			-- Lines of context
---opt.sessionoptions = { "buffers", "curdir", "tabpages", "winsize", "help", "globals", "skiprtp", "folds" }
 opt.shiftround = true -- Round indent
 opt.sidescrolloff = 8		-- Columns of context
 opt.spelllang = {"en"}
@@ -45,4 +45,5 @@ opt.wildmode = "longest:full,full" -- Command-line completion mode
 opt.winminwidth = 5 -- Minimum window width
 opt.wrap = false -- Disable line wrap
 
-opt.signcolumn = "yes:2"		-- Always show the signcolumn, otherwise it would shift the text each time
+opt.signcolumn = "no"		-- Always show the signcolumn, otherwise it would shift the text each time
+

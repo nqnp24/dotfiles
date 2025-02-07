@@ -7,7 +7,11 @@ return {
     "MunifTanjim/nui.nvim",
     -- {"3rd/image.nvim", opts = {}}, -- Optional image support in preview window: See `# Preview Mode` for more information
   },
-    opts = {
-    window = { position = "right" },
+  source_selector = {
+      winbar = true,
+      statusline = true
   },
+  opts = {
+      window = { position = "right" }
+  }
 }
