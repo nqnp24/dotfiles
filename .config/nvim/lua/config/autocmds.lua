@@ -1,19 +1,19 @@
 -- ~/.config/nvim/lua/config/autocmds.lua
 
--- Enable colorcolumn for specific filetypes
+-- C/C++
 vim.api.nvim_create_autocmd("FileType", {
-    pattern = { "c", "h" },
+    pattern = { "c", "cc", "cpp", "h", "hpp"},
     callback = function()
-        -- Set textwidth to 80 globally
         vim.o.textwidth = 80
-
-        -- Highlight column 80
         vim.wo.colorcolumn = "80"
+    end,
+})
 
-        -- Enable auto-wrap for text and comments
-        vim.bo.formatoptions = vim.bo.formatoptions .. 'tc'
-
-        -- Customize the colorcolumn highlight
-        vim.cmd([[highlight ColorColumn ctermbg=white guibg=gray]])
+-- Python
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = { "py"},
+    callback = function()
+        vim.o.textwidth = 120
+        vim.wo.colorcolumn = "120"
     end,
 })
