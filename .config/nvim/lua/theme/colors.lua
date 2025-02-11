@@ -13,7 +13,7 @@ local colors = {
   cyan = "#8ec07c",
 
   -- More colors for more customization
-  dark_gray = "#50505",
+  dark_gray = "#505050",
   light_gray = "#bdae93",
   purple = "#C77DBB",
 }
